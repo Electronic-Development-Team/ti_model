@@ -1,55 +1,149 @@
-# Prerequisites
-*.d
+# Keil MDK-ARM 项目通用 .gitignore
+# 整合优化版本
 
-# Object files
+###################
+# 编译输出文件目录 #
+###################
+/MDK-ARM/DebugConfig/
+/MDK-ARM/**/Obj/
+/MDK-ARM/**/Exe/
+/MDK-ARM/**/List/
+/Listings/
+/Objects/
+/Debug/
+/Release/
+/build/
+/RTE/
+/Templates/
+/Examples/
+/.vscode/
+
+#####################
+# 用户特定 uVision 文件 #
+#####################
+*.opt
+*.uvopt
+*.uvoptx
+*.uvgui
+*.uvgui.*
+*.uvguix.*
+*.scvd
+*.uvguix
+*.log
+*.lock
+
+################
+# 编译生成的文件 #
+################
+# 目标文件
 *.o
-*.ko
 *.obj
+*.axf
 *.elf
 
-# Linker output
-*.ilk
+# 列表文件
+*.cod
+*.htm
+*.i
+*.lst
 *.map
-*.exp
+*.m51
+*.m66
+*.scr
 
-# Precompiled Headers
-*.gch
-*.pch
+# 依赖和调试信息
+*.d
+*.crf
+*.dep
+*.dbg*
 
-# Libraries
+# 链接和中间文件
+*.h86
 *.lib
-*.a
-*.la
-*.lo
+*.sbr
+*.lnp
+*.lin
+*.sct
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
+# 十六进制和二进制输出
 *.hex
+*.bin
+*.b[0-3][0-9]
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# 构建中间文件
+*.bat
+*._ia
+*.__i
+*._ii
+*.build_log.htm
+*.cdb
+*.ic
+*.orc
+*.tra
+*.fed
+*.l1p
+*.l2p
+*.iex
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+#################
+# 调试器和配置文件 #
+#################
+*.ini
+*.sfd
+*.sfr
+JLinkLog.txt
+JLinkSettings.ini
 
-# debug information files
-*.dwo
+####################
+# IDE 和临时文件    #
+####################
+*.bak
+*.plg
+*.pdsc
+*.pack
+.mxproject
+.metadata/
+.settings/
+.project
+.cproject
+
+##################
+# 系统和临时文件   #
+##################
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*.log
+
+########################
+# 显式允许的例外文件    #
+########################
+# 项目文件
+!*.uvprojx
+!*.h
+!*.c
+!*.ioc
+
+# dot files
+/.vscode/launch.json
+/.settings
+/.eide/log
+/.eide.usr.ctx.json
+
+# project out
+/build
+/bin
+/obj
+/out
+
+# eide template
+*.ept
+*.eide-template
+
+
+# 如需允许输出文件，取消下方注释
+#!/*.axf
+#!/*.bin
+#!/*.hex
